@@ -4,16 +4,46 @@
     --hero-title-color: #FFFFFF;
     --accent-color: #2196F3;
 }
+html {
+    box-sizing: border-box;
+}
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
 
 body {  
   color: var(--brand-color);
   font-family: Roboto, sans-serif;
+  margin: 0;
 }
 
 ul {
    list-style: none; 
+   margin: 0;
+ 
+}
+h1, h2, h3, h4, h5, h6 { 
+   margin: 0;
+}
+a {
+    text-decoration: none;
+    color: currentColor;
 }
 
+.header {
+    background-color: aqua;
+}
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    outline: 1px dashed red;
+}
  .nav .nav-logo {
     color: var(--brand-color);
     font-family: Raleway, sans-serif;
@@ -62,6 +92,7 @@ ul {
 
 .hero {
     background-color: #2F303A;
+    text-align: center;
 }
 
 .hero-title  {
@@ -71,6 +102,7 @@ ul {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    margin-bottom: 30px;
 }
 .hero-btn {
     font-family: inherit;
@@ -79,16 +111,19 @@ ul {
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30 / 16);
-    display: flex;
-    align-items: center;
-    text-align: center;
+    display: inline-block;
+    align-items: center; 
     letter-spacing: 0.06em;
     cursor: pointer;
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200px;
 }
 .hero-btn:hover,
 .hero-btn:focus,
 .hero-btn:active {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 .aside-title {
     color: var(--brand-color);
@@ -96,6 +131,7 @@ ul {
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 10px;
 
 }
 .aside-text {
@@ -114,6 +150,12 @@ ul {
     line-height: calc(42 / 36);
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+.team-item {
+    background-color: var(--hero-title-color);
+    min-width: 270px;
+    border-radius: 0px 0px 4px 4px;;
 }
 .team-name {
     color: var(--brand-color);
