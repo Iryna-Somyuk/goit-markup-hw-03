@@ -3,7 +3,11 @@
     --text-color: #757575;
     --hero-title-color: #FFFFFF;
     --accent-color: #2196F3;
+
+    --indent: 15px;
+    --items: 3;
 }
+
 html {
     box-sizing: border-box;
 }
@@ -23,11 +27,16 @@ body {
 
 ul {
    list-style: none; 
-   margin: 0;   
+   margin: 0;
+   padding: 0;   
 }
 
 h1, h2, h3, h4, h5, h6, p { 
    margin: 0;
+}
+
+img {
+    display: block;
 }
 
 a {
@@ -40,8 +49,8 @@ a {
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+
     outline: 1px dashed red;
 }
  
@@ -55,6 +64,7 @@ a {
     padding-top: 24px;
     padding-bottom: 25px;
     margin-right: 93px;
+
     color: var(--brand-color);
     font-family: Raleway, sans-serif;
     font-size: 26px;
@@ -85,6 +95,7 @@ a {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
+
     color: var(--brand-color);
     font-weight: 500;
     font-size: 14px;
@@ -106,6 +117,7 @@ a {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
+
     color: var(--text-color);
     font-weight: 500;
     font-size: 14px;
@@ -135,7 +147,6 @@ a {
 
 .hero-btn {
     font-family: inherit;
-    background-color: var(--accent-color);
     color: var(--hero-title-color);
     font-weight: 700;
     font-size: 16px;
@@ -144,7 +155,10 @@ a {
     align-items: center; 
     letter-spacing: 0.06em;
     cursor: pointer;
+
+    background-color: var(--accent-color);
     border-radius: 4px;
+
     padding: 10px 32px;
     min-width: 200px;
 }
@@ -235,14 +249,16 @@ a {
     gap: 30px;
 }
 .team-item {
-    background-color: var(--hero-title-color);
     min-width: 270px;
+
+    background-color: var(--hero-title-color);
     border-radius: 0px 0px 4px 4px;
 }
 
 .team-name {
     margin-top: 30px;
     margin-bottom: 10px;
+
     color: var(--brand-color);
     font-size: 16px;
     line-height: calc(19 / 16);
@@ -252,6 +268,7 @@ a {
 
 .team-text {
     margin-bottom: 30px;
+
     color: var(--text-color);
     font-size: 16px;
     line-height: calc(19 / 16);
@@ -342,20 +359,28 @@ a {
 .progect-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 30px;
+   /* justify-content: space-between;*/
    
 }
 
 .progect-item {
-    margin-bottom: 30px;
+   /* margin-bottom: 30px;*/
     min-width: 370px;
+    flex-basis: calc((100%-(var(--indent)*(var(--items)-1))/var(--items)));
+
+   
+}
+/*.progect-item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}*/
+.progect-border {
     border: 1px solid #EEEEEE;
 }
-.progect-item:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-}
+
 .progect-title {
     margin: 20px 24px 4px;
+    
     color: var(--brand-color);
     font-size: 18px;
     line-height: calc(36 / 18);
@@ -364,6 +389,7 @@ a {
 }
 .progect-text {
     margin: 0px 24px 20px;
+
     color: var(--text-color);
     font-size: 16px;
     line-height: calc(30 / 16);
